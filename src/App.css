@@ -23,11 +23,16 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   /* Prevent scrollbars on the body */
 }
 
-
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  /* Full height */
+}
 
 .flex-grow {
   overflow-y: hidden;

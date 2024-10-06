@@ -161,7 +161,7 @@ function Home() {
                     </div>
 
                     {/* Cards Section */}
-                    <div className='bg-[#121212] rounded-lg w-full  md:h-[95vh] h-[95vh] overflow-y-auto scrollbar-thin'>
+                    <div className='bg-[#121212] rounded-lg w-full  md:h-[75vh] h-[75vh] overflow-y-auto scrollbar-thin'>
                         <div className='p-4'>
                             {/* First Title and Cards */}
                             {cardTitle1.map((card1, index1) => (
@@ -169,7 +169,7 @@ function Home() {
                                     {card1.album}
                                 </h1>
                             ))}
-                            <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 overflow-y-auto mb-40'>
+                            <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 overflow-y-auto '>
                                 {firstFiveCards.map((card, index) => (
                                     <div
                                         key={index}
@@ -211,7 +211,7 @@ function Home() {
                             max={songDuration}
                             value={currentTime}
                             onChange={handleSliderChange}
-                            className="slider md:w-1/3 h-1 rounded-lg cursor-pointer"
+                            className="slider sm:w-[30%] md:w-1/3 h-1 rounded-lg cursor-pointer"
                         />
                         <span className="text-white">{Math.floor(currentTime)}s / {Math.floor(songDuration)}s</span>
                     </div>
