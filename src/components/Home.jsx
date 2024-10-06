@@ -78,9 +78,9 @@ function Home() {
         <>
             <div className='bg-[#000] h-[100vh] relative box-border'>
                 {/* Navbar Section */}
-                <navbar className='w-full h-auto grid grid-cols-3 px-2 pb-1 pt-2 items-center'>
+                <navbar className='w-full h-auto grid grid-cols-2 md:grid-cols-3 px-2 pb-1 pt-2 items-center'>
                     <div className='text-4xl text-white px-4'><FaSpotify className='cursor-pointer' /></div>
-                    <div className='flex justify-center mt-1 gap-2'>
+                    <div className='hidden md:flex justify-center mt-1 gap-2'>
                         <div className=''>
                             <button className='w-12 h-12 rounded-[50%] bg-[#1f1f1f] flex justify-center items-center text-3xl text-white hover:scale-110 duration-150'><TiHome /></button>
                         </div>
@@ -93,15 +93,15 @@ function Home() {
                         </div>
                     </div>
                     <div className='flex justify-end items-center h-auto gap-4'>
-                        <Link to={'/signup'} className='text-gray-400 font-bold p-3 hover:scale-110 duration-150 hover:text-white'>Sign up</Link>
-                        <Link to={'/login'} className='text-black bg-white rounded-full py-3 px-8 font-bold hover:scale-105 duration-100'>Log in</Link>
+                        <Link to={'/signup'} className='text-gray-400 w-full md:w-auto font-bold md:p-3 hover:scale-110 duration-150 hover:text-white text-center'>Sign up</Link>
+                        <Link to={'/login'} className='text-black bg-white w-full md:w-auto  rounded-full md:py-3 md:px-8 font-bold hover:scale-105 duration-100 text-center'>Log in</Link>
                     </div>
                 </navbar>
 
                 {/* Main Content */}
                 <div className='w-auto h-auto flex text-gray-400 p-2 gap-2'>
                     {/* Sidebar Section */}
-                    <div className='bg-[#171717] p-2 rounded-lg w-[20%] h-auto scrollbar-thin-black'>
+                    <div className='bg-[#171717] p-2 rounded-lg w-[20%] h-auto scrollbar-thin-black hidden  md:flex flex-col'>
                         <div className='flex justify-between items-center mb-10'>
                             <h1 className='flex items-center gap-2 py-1 text-base font-bold'>
                                 <BiLibrary className='text-3xl font-bold' />Your Library
@@ -144,15 +144,15 @@ function Home() {
                                     {card1.album}
                                 </h1>
                             ))}
-                            <div className='grid grid-cols-5 overflow-y-auto mb-6'>
+                            <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 overflow-y-auto mb-6'>
                                 {firstFiveCards.map((card, index) => (
                                     <div
                                         key={index}
-                                        className='card-container h-80 w-auto m-2 p-4 rounded-lg cursor-pointer hover:bg-[#121111] hover:scale-105 duration-200'
+                                        className='card-container h-auto md:h-80 w-auto m-2 p-4 rounded-lg cursor-pointer hover:bg-[#121111] hover:scale-105 duration-200'
                                     >
-                                        <img src={card.img} className='h-56 w-56 rounded-lg' alt={card.title} />
+                                        <img src={card.img} className='h-[200px] md:h-52 w-full rounded-lg' alt={card.title} />
                                         <p className=' text-white mt-2'>{card.title}</p>
-                                        <span className='text-400'>{card.artist}</span>
+                                        <span className='text-[10px] md:text-sm text-gray-400'>{card.artist}</span>
                                     </div>
                                 ))}
                             </div>
@@ -163,14 +163,14 @@ function Home() {
                                     {card2.album}
                                 </h1>
                             ))}
-                            <div className='grid grid-cols-5 overflow-y-auto mb-6'>
+                            <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5  overflow-y-auto mb-6'>
                                 {remainingCards.map((card, index) => (
                                     <div
                                         key={index}
-                                        className='card-container h-64 w-auto m-2 p-4 rounded-lg cursor-pointer hover:bg-[#121111] hover:scale-105 duration-200'
+                                        className='card-container md:h-64 w-auto m-2 p-4 rounded-lg cursor-pointer hover:bg-[#121111] hover:scale-105 duration-200'
                                     >
-                                        <img src={card.img} className='h-48 w-auto rounded-lg' alt={card.title} />
-                                        <p className=' text-gray-400 font-semibold mt-2 text-xs'>{card.title}</p>
+                                        <img src={card.img} className='h-40 md:h-48 w-full rounded-lg' alt={card.title} />
+                                        <p className=' text-gray-400 font-semibold mt-2 text-[10px] md:text-xs'>{card.title}</p>
 
                                     </div>
                                 ))}
@@ -180,12 +180,12 @@ function Home() {
                 </div>
 
                 {/* Footer */}
-                <Link to={'/signup'} className='text-white bg-gradient-to-r from-[#af2896] to-[#509bf5] fixed flex justify-between w-[100%] px-4 py-2 mx-2 cursor-pointer'>
+                <Link to={'/signup'} className='text-white bg-gradient-to-r from-[#af2896] to-[#509bf5] fixed flex justify-between w-[100%] px-4 py-2 mx-2 cursor-pointer '>
                     <div>
                         <h1 className='font-bold text-sm'>Preview of Spotify</h1>
-                        <p className='text-sm font-medium'>Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.</p>
+                        <p className='text-xs md:text-sm font-medium'>Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.</p>
                     </div>
-                    <Link to={'/signup'} className='px-4 py-2 mx-4 bg-white rounded-full text-black text-base font-bold hover:scale-105 duration-100 hover:bg-gray-200'>Sign up free</Link>
+                    <Link to={'/signup'} className='w-44 text-center flex items-center text-sm h-12 pl-5 md:h-auto md:w-auto md:px-4 md:py-2 mx-4 bg-white rounded-full text-black md:text-base font-bold hover:scale-105 duration-100 hover:bg-gray-200'>Sign up free</Link>
                 </Link>
             </div>
         </>
