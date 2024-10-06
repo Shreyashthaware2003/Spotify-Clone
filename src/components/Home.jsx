@@ -211,7 +211,7 @@ function Home() {
                             max={songDuration}
                             value={currentTime}
                             onChange={handleSliderChange}
-                            className="slider w-60 md:w-1/3 h-1 rounded-lg cursor-pointer"
+                            className="slider md:w-1/3 h-1 rounded-lg cursor-pointer"
                         />
                         <span className="text-white">{Math.floor(currentTime)}s / {Math.floor(songDuration)}s</span>
                     </div>
