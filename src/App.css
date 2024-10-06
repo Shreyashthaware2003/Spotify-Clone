@@ -4,7 +4,8 @@
 }
 
 .scrollbar-thin-black::-webkit-scrollbar-thumb {
-  background-color: white; /* Black color */
+  background-color: white;
+  /* Black color */
   border-radius: 10px;
 }
 
@@ -15,4 +16,20 @@
 .scrollbar-thin-black {
   scrollbar-width: thin;
   scrollbar-color: white transparent;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  /* Prevent scrollbars on the body */
+}
+
+
+
+.flex-grow {
+  overflow-y: hidden;
+  /* Prevent scrolling in the main content */
 }
