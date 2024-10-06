@@ -29,43 +29,43 @@ function Home() {
             artist: 'Yo Yo Honey Singh',
         },
         {
-            img: '/public/darshan_raval.jpg',
+            img: '/darshan_raval.jpg',
             title: 'Barrish',
             artist: 'Darshan Raval',
         },
         {
-            img: '/public/shubh.jpg',
+            img: '/shubh.jpg',
             title: 'Baller',
             artist: 'Shubh',
         },
         {
-            img: '/public/diljit_dosanjh.jpg',
+            img: '/diljit_dosanjh.jpg',
             title: 'Born to shine',
             artist: 'Diljit Dosanjh',
         },
         {
-            img: '/public/karan_aujla.jpg',
+            img: '/karan_aujla.jpg',
             title: 'Antidote',
             artist: 'Karan Aujla',
         },
         {
-            img: '/public/one.jpg',
+            img: '/one.jpg',
             title: 'Your weekly update of the most played tracks right now - Global.',
         },
         {
-            img: '/public/two.jpg',
+            img: '/two.jpg',
             title: 'Your weekly update of the most played tracks right now - USA.',
         },
         {
-            img: '/public/three.jpg',
+            img: '/three.jpg',
             title: 'Your daily update of the most played tracks right now - Global.',
         },
         {
-            img: '/public/four.jpg',
+            img: '/four.jpg',
             title: 'Your daily update of the most played tracks right now - USA.',
         },
         {
-            img: '/public/five.jpg',
+            img: '/five.jpg',
             title: 'Your daily update of the most played tracks right now - Global.',
         },
     ];
