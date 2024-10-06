@@ -148,9 +148,9 @@ function Home() {
                                 {firstFiveCards.map((card, index) => (
                                     <div
                                         key={index}
-                                        className='card-container h-auto md:h-80 w-auto m-2 p-4 rounded-lg cursor-pointer hover:bg-[#121111] hover:scale-105 duration-200'
+                                        className='card-container h-auto md:h-80 w-[100%] md:w-auto md:m-2 p-4 rounded-lg cursor-pointer hover:bg-[#121111] hover:scale-105 duration-200'
                                     >
-                                        <img src={card.img} className='h-[200px] md:h-52 w-full rounded-lg' alt={card.title} />
+                                        <img src={card.img} className='h-[160px] md:h-52 w-full rounded-lg' alt={card.title} />
                                         <p className=' text-white mt-2'>{card.title}</p>
                                         <span className='text-[10px] md:text-sm text-gray-400'>{card.artist}</span>
                                     </div>
@@ -167,7 +167,7 @@ function Home() {
                                 {remainingCards.map((card, index) => (
                                     <div
                                         key={index}
-                                        className='card-container md:h-64 w-auto m-2 p-4 rounded-lg cursor-pointer hover:bg-[#121111] hover:scale-105 duration-200'
+                                        className='card-container md:h-64 w-full md:w-auto md:m-2  p-4 rounded-lg cursor-pointer hover:bg-[#121111] hover:scale-105 duration-200'
                                     >
                                         <img src={card.img} className='h-40 md:h-48 w-full rounded-lg' alt={card.title} />
                                         <p className=' text-gray-400 font-semibold mt-2 text-[10px] md:text-xs'>{card.title}</p>
@@ -177,16 +177,17 @@ function Home() {
                             </div>
                         </div>
                     </div>
+                    {/* Footer */}
+                    <Link to={'/signup'} className='text-white bg-gradient-to-r from-[#af2896] to-[#509bf5] fixed flex justify-between items-center w-[100%] px-4 py-2  cursor-pointer bottom-0 '>
+                        <div>
+                            <h1 className='font-bold text-sm'>Preview of Spotify</h1>
+                            <p className='text-xs md:text-sm font-medium'>Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.</p>
+                        </div>
+                        <Link to={'/signup'} className='w-48 text-center flex items-center text-sm h-12 justify-center md:h-auto md:w-auto md:px-4 md:py-2 ml-2 md:mx-4 bg-white rounded-full text-black md:text-base font-bold hover:scale-105 duration-100 hover:bg-gray-200'>Sign up free</Link>
+                    </Link>
                 </div>
 
-                {/* Footer */}
-                <Link to={'/signup'} className='text-white bg-gradient-to-r from-[#af2896] to-[#509bf5] fixed flex justify-between w-[100%] px-4 py-2 mx-2 cursor-pointer '>
-                    <div>
-                        <h1 className='font-bold text-sm'>Preview of Spotify</h1>
-                        <p className='text-xs md:text-sm font-medium'>Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.</p>
-                    </div>
-                    <Link to={'/signup'} className='w-44 text-center flex items-center text-sm h-12 pl-5 md:h-auto md:w-auto md:px-4 md:py-2 mx-4 bg-white rounded-full text-black md:text-base font-bold hover:scale-105 duration-100 hover:bg-gray-200'>Sign up free</Link>
-                </Link>
+
             </div>
         </>
     );
