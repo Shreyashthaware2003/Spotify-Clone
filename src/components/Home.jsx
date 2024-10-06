@@ -24,7 +24,7 @@ function Home() {
 
     const cardsData = [
         {
-            img: '../public/honey_singh.jpg',
+            img: '/honey_singh.jpg',
             title: 'Glory',
             artist: 'Yo Yo Honey Singh',
         },
